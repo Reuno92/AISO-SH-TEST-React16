@@ -1,3 +1,79 @@
+#Subject
+
+BananesExport est une entreprise d'exportation de bananes qui est en pleine croissance et recrute fortement dans le monde entier.
+Malheureusement les employés se plaignent de plus en plus de la lourdeur du processus d’accueil et de fourniture de poste de travail.
+BananesExport souhaiterait une expérience utilisateur interactive innovante à travers un portail web et mobile en self service dans lequel: 
+- un employé peut planifier le jour d'arrivée d’un nouvel employé 
+- un employé peut composer un poste de travail pour un nouvel arrivant par rapport à son futur rôle dans l’entreprise avec un aperçu du budget en temps réel 
+- un employé peut définir un rôle pour le nouvel arrivant:     
+  - Commercial     
+  - Trader     
+  - Développeur 
+- un employé peut composer un poste de travail pour un nouvel arrivant par rapport à son futur rôle:      
+  - Ordinateur [1 maximum par personne]:         
+  - ordinateur portable à 1800€,         
+  - ordinateur fixe+écran  2200€,     
+  - station d’accueil d’ordinateur portable 400€ [1 maximum par personne si ordinateur portable],     
+  - écran supplémentaire avec socle de fixation 250€ [3 maximum par personne],     
+  - Téléphonie [1 maximum par personne]:         
+    - smartphone 600€,         
+    - téléphone fixe 100€,     
+    - micro-casque sans fil 250€ [dans la limite du budget] 
+  
+- un employé peut à tout moment consulter et modifier la composition de son propre poste de travail 
+
+* * *
+ Il existe des règles sur l’attribution de matériel: 
+ - Pour les commerciaux qui sont la plus part du temps en clientèle et qui n’ont pas de bureau fixe:
+      - n’utilisent que des ordinateurs portables
+      - possèdent toujours un téléphone portable
+      - 3000€ maximum de budget 
+      
+ - Pour les traders qui sont sédentaires rivés à leurs écrans:
+      - n’utilisent que ordinateurs fixes     
+      - possèdent minimum 3 écrans     
+      - pas de limite de budget
+       
+ - Pour les développeurs qui collaborent entre eux régulièrement
+      - 3000€ maximum de budget 
+
+BananesExport souhaiterait une expérience utilisateur fluide et responsive qui ne permette pas de configuration 
+incohérente tout en permettant aux utilisateurs de visualiser au maximum leur futur environnement de travail. 
+
+
+### Contraintes techniques 
+- Le front sera développé en REACT 
+- Pour la partie stockage des données, le choix est laissé libre (pas besoin de persistance, un stockage en mémoire est suffisant) 
+- La production d’un backend n’est pas nécessaire
+
+# Installation
+run on terminal or your command invite:
+```
+yarn install
+```
+
+if you don't install `Yarn package manager`, you can install `yarn`with this URL: `https://legacy.yarnpkg.com/fr/`.
+
+# Starting
+1 - Open your terminal or command invite for launch json-server with command:
+```
+json-server --watch db.json
+```
+
+It create a server on `localhost:3000` 
+
+2 - Open another terminal or command invite and type the command:
+```
+yarn start
+```
+
+It create a server on `localhost:3001` after type `Y` because the port 3000 is busy.
+
+3 - On your browser, type `localhost:3001`.
+
+Happy hacking !!!
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
