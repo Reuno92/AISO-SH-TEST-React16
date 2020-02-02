@@ -5,14 +5,18 @@ import {Job} from '../model/Job';
 import {Computer} from '../model/workstation/ComputerStation';
 import {Telephony} from '../model/workstation/TelephonyStation';
 import Options from '../model/workstation/Options';
+import {Person} from '../model/Person';
+
+type PersonModalProps = {
+	form: Person
+}
 
 type OptionsSupplies = {
 	computer: Array<Options>;
 	telephony: Array<Options>;
 }
 
-const PersonModal: FC = () => {
-
+const PersonModal: FC<PersonModalProps> = ({form}: PersonModalProps) => {
 	/**
 	 *  Ref List State
 	 */
@@ -24,6 +28,7 @@ const PersonModal: FC = () => {
 
 	const [maxOptionsComputer, setMaxOptionsComputer] = useState<number>(1);
 	const [minOptionsComputer, setMinOptionsComputer] = useState<number>(0);
+
 	const optionsComputerSelected = useRef<FormControl<React.ElementType<any>> | null>(null);
 	const optionsTelephonySelected = useRef<FormControl<React.ElementType<any>>>(null);
 
@@ -81,25 +86,29 @@ const PersonModal: FC = () => {
 	};
 
 	return (
-		<Form>
+		<React.Fragment>
 			<Col>
-				<h2>General Informations</h2>
+				<h2>General Information</h2>
 				<Form.Row>
 					<Form.Group as={Col} controlId="FormFirstName">
 						<Form.Label>First name</Form.Label>
-						<Form.Control type="text" placeholder="Enter the arrival's first name"/>
+						<Form.Control type="text"
+													placeholder="Enter the arrival's first name"
+													defaultValue={form.firstName}/>
 					</Form.Group>
 
 					<Form.Group as={Col} controlId="FormLastName">
 						<Form.Label>Last name</Form.Label>
-						<Form.Control type="text" placeholder="Enter the arrival's last name"/>
+						<Form.Control type="text"
+													placeholder="Enter the arrival's last name"
+													defaultValue={form.lastName}/>
 					</Form.Group>
 				</Form.Row>
 
 				<Form.Row>
 					<Form.Group as={Col} controlId="FormJob">
 						<Form.Label>Job</Form.Label>
-						<Form.Control as="select">
+						<Form.Control as="select" defaultValue={form.job.name}>
 							<option value="none">Choose job…</option>
 							{
 								jobs.map(job => (
@@ -115,7 +124,9 @@ const PersonModal: FC = () => {
 				<Form.Row>
 					<Form.Group as={Col} controlId="FormArrivalDate">
 						<Form.Label>Arrival Date</Form.Label>
-						<Form.Control type="date" min={new Date().toISOString().split('T')[0]}/>
+						<Form.Control type="date"
+													defaultValue={form.arrivalDate}
+													min={new Date().toISOString().split('T')[0]}/>
 					</Form.Group>
 				</Form.Row>
 			</Col>
@@ -193,7 +204,7 @@ const PersonModal: FC = () => {
 					</Form.Group>
 				</Form.Row>
 			</Col>
-		</Form>
+		</React.Fragment>
 	);
 };
 

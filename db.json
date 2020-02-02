@@ -4,7 +4,11 @@
       "id": 1,
       "firstName": "John",
       "lastName": "Doe",
-      "job": "Commercial",
+      "job": {
+        "id" : 1,
+        "name": "Commercial",
+        "maxBudget": 3000
+      },
       "budget": 3000,
       "arrivalDate": 435625200000
     },
@@ -12,7 +16,11 @@
       "id": 2,
       "firstName": "Steve",
       "lastName": "Wozniak",
-      "job": "Developer",
+      "job": {
+        "id": 2,
+        "name": "Developer",
+        "maxBudget": 3000
+      },
       "budget": 3000,
       "arrivalDate": 435625200000
     },
@@ -20,7 +28,11 @@
       "id": 3,
       "firstName": "Jordan",
       "lastName": "Belfort",
-      "job": "Trader",
+      "job": {
+        "id": 3,
+        "name": "Trader",
+        "maxBudget": null
+      },
       "budget": 6000,
       "arrivalDate": 435625200000
     }

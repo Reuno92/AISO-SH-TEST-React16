@@ -8,7 +8,7 @@ export class Person {
 		public lastName: string,
 		public budget: number,
 		public job: Job,
-		public arrivalDate?: Date,
+		public arrivalDate?: string,
 	) {
 	}
 }
