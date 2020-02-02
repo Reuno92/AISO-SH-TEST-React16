@@ -6,7 +6,8 @@ export class Person {
 		public id: number,
 		public firstName: string,
 		public lastName: string,
-		public arrivalDate: Date,
-		public job: Job
+		public budget: number,
+		public job: Job,
+		public arrivalDate?: Date,
 	) {}
 }
