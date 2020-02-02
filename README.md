@@ -10,12 +10,12 @@ BananesExport souhaiterait une expérience utilisateur interactive innovante à 
   - Trader     
   - Développeur 
 - un employé peut composer un poste de travail pour un nouvel arrivant par rapport à son futur rôle:      
-  - Ordinateur [1 maximum par personne]:         
+- Ordinateur [1 maximum par personne]:         
   - ordinateur portable à 1800€,         
   - ordinateur fixe+écran  2200€,     
   - station d’accueil d’ordinateur portable 400€ [1 maximum par personne si ordinateur portable],     
   - écran supplémentaire avec socle de fixation 250€ [3 maximum par personne],     
-  - Téléphonie [1 maximum par personne]:         
+- Téléphonie [1 maximum par personne]:         
     - smartphone 600€,         
     - téléphone fixe 100€,     
     - micro-casque sans fil 250€ [dans la limite du budget] 
@@ -24,7 +24,7 @@ BananesExport souhaiterait une expérience utilisateur interactive innovante à 
 
 * * *
  Il existe des règles sur l’attribution de matériel: 
- - Pour les commerciaux qui sont la plus part du temps en clientèle et qui n’ont pas de bureau fixe:
+ - Pour les commerciaux qui sont la plupart du temps en clientèle et qui n’ont pas de bureau fixe:
       - n’utilisent que des ordinateurs portables
       - possèdent toujours un téléphone portable
       - 3000€ maximum de budget 
