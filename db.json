@@ -29,17 +29,17 @@
     {
       "id": 1,
       "name": "Commercial",
-      "budget": 3000
+      "maxBudget": 3000
     },
     {
       "id": 2,
       "name": "Developer",
-      "budget": 3000
+      "maxBudget": 3000
     },
     {
       "id": 3,
       "name": "Trader",
-      "budget": null
+      "maxBudget": null
     }
   ],
   "computer": [

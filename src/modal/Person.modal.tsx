@@ -13,17 +13,19 @@ type OptionsSupplies = {
 
 const PersonModal: FC = () => {
 
+	/**
+	 *  Ref List State
+	 */
 	const [jobs, setJobs] = useState(Array<Job>());
 	const [computers, setComputers] = useState<Array<Computer>>(Array<Computer>());
 	const [telephony, setTelephony] = useState<Array<Telephony>>(Array<Telephony>());
 	const [optionsComputer, setOptionsComputer] = useState<Array<Options>>(Array<Options>());
-	const [maxOptionsComputer, setMaxOptionsComputer] = useState<number>(1);
-	const [minOptionsComputer, setMinOptionsComputer] = useState<number>(0);
 	const [optionsTelephony, setOptionsTelephony] = useState<Array<Options>>(Array<Options>());
 
-
-	const optionsComputerSelected = useRef<FormControl<React.ElementType<any>> | null>(null);
-	let computerOptionLimit: number = 1;
+	const [maxOptionsComputer, setMaxOptionsComputer] = useState<number>(1);
+	const [minOptionsComputer, setMinOptionsComputer] = useState<number>(0);
+	const optionsComputerSelected = useRef<FormControl<React.ElementType<any>> | null>(null);
+	const optionsTelephonySelected = useRef<FormControl<React.ElementType<any>>>(null);
 
 	const urlJob = 'http://localhost:3000/job';
 	const urlComputer = 'http://localhost:3000/computer';
@@ -32,7 +34,7 @@ const PersonModal: FC = () => {
 
 	/**
 	 * Ref List of Job, computers, telephony, options' computer, options' telephony
- 	 */
+	 */
 	useEffect(() => {
 		fetch(urlJob)
 			.then((res: Response) => res.json())
@@ -65,13 +67,12 @@ const PersonModal: FC = () => {
 
 	/**
 	 * Max and Min limit of options computer selected.
-	 * @param e
+	 * @param e React.ChangeEvent
 	 */
 	const getLimitOptionsComputerSelected = (e: React.ChangeEvent<HTMLInputElement>) => {
-		console.log(e);
 		const index: number = optionsComputer.findIndex(x => x.name === e.target.value);
 		if (optionsComputer[index] !== undefined) {
-			setMaxOptionsComputer( optionsComputer[index].maxNumberLimit);
+			setMaxOptionsComputer(optionsComputer[index].maxNumberLimit);
 			setMinOptionsComputer(1);
 		} else {
 			setMaxOptionsComputer(0);
@@ -103,7 +104,7 @@ const PersonModal: FC = () => {
 							{
 								jobs.map(job => (
 									<option key={job.id} value={job.name}>
-										{job.name}
+										{job.name} - limit: {(typeof job.maxBudget === 'number') ? job.maxBudget + ' €' : 'Unlimited' }
 									</option>
 								))
 							}
@@ -114,7 +115,7 @@ const PersonModal: FC = () => {
 				<Form.Row>
 					<Form.Group as={Col} controlId="FormArrivalDate">
 						<Form.Label>Arrival Date</Form.Label>
-						<Form.Control type="date" min={new Date().toISOString().split("T")[0]}/>
+						<Form.Control type="date" min={new Date().toISOString().split('T')[0]}/>
 					</Form.Group>
 				</Form.Row>
 			</Col>
@@ -125,7 +126,7 @@ const PersonModal: FC = () => {
 					<Form.Group as={Col} controlId="FormComputer">
 						<Form.Label>Computer</Form.Label>
 						<Form.Control as="select">
-							<option	value="none">Choose one only</option>
+							<option value="none">Choose one only</option>
 							{
 								computers.map(computer =>
 									(
@@ -143,8 +144,8 @@ const PersonModal: FC = () => {
 						<Form.Label>Options</Form.Label>
 						<Form.Control as="select"
 													onChange={(e: React.ChangeEvent<HTMLInputElement>) => getLimitOptionsComputerSelected(e)}
-													ref={ optionsComputerSelected }>
-							<option	value="none">Choose one only</option>
+													ref={optionsComputerSelected}>
+							<option value="none">Choose one only</option>
 							{
 								optionsComputer.map(option =>
 									(
@@ -156,9 +157,13 @@ const PersonModal: FC = () => {
 						</Form.Control>
 					</Form.Group>
 
-					<Form.Group as={Col} controlId="FormComputer">
+					<Form.Group as={Col} controlId="FormOptionsNumber">
 						<Form.Label>Choose a number</Form.Label>
-						<Form.Control type="number" placeholder="Choose a number" defaultValue={'0'} min={minOptionsComputer} max={maxOptionsComputer}>
+						<Form.Control type="number"
+													placeholder="Choose a number"
+													defaultValue={'0'}
+													min={minOptionsComputer}
+													max={maxOptionsComputer}>
 						</Form.Control>
 					</Form.Group>
 				</Form.Row>
@@ -167,18 +172,24 @@ const PersonModal: FC = () => {
 			<Col>
 				<h2>Telephony Supplies</h2>
 				<Form.Row>
-					<Form.Group as={Col} controlId="FormOptionsComputer">
+					<Form.Group as={Col} controlId="FormTelephony">
 						<Form.Label>Phone</Form.Label>
-						<Form.Control as="select">
+						<Form.Control as="select" ref={optionsTelephonySelected}>
 							<option value="none">Choose one only</option>
 							{
-								telephony.map( phone => (
-									<option key={phone.id} value={phone.name}>
+								telephony.map(phone => (
+									<option key={phone.id}
+													value={phone.name}>
 										{`${phone.label} (${phone.price} €)`}
 									</option>
 								))
 							}
 						</Form.Control>
+					</Form.Group>
+				</Form.Row>
+				<Form.Row>
+					<Form.Group as={Col} controlId="FormOptionsTelephony">
+						<Form.Check type="checkbox" label="Headphones (250 €)" />
 					</Form.Group>
 				</Form.Row>
 			</Col>
