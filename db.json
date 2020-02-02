@@ -1,5 +1,5 @@
 {
-  "person": [
+  "persons": [
     {
       "id": 1,
       "fistName": "John",
@@ -42,25 +42,57 @@
   "computer": [
     {
       "id": 1,
-      "label": "desktop",
-      "name": "Desktop",
+      "label": "Desktop",
+      "value": "desktop",
       "price": 2200
     },
     {
       "id": 2,
-      "label": "laptop",
-      "name": "Laptop",
+      "label": "Laptop",
+      "value": "Laptop",
       "price": 1800
     }
   ],
   "telephony": [
     {
       "id": 1,
-      "name": "smartphone"
+      "label": "Smartphone",
+      "value": "smartphone",
+      "price": 600
     },
     {
       "id": 2,
-      "name": "phone"
+      "label": "Phone",
+      "value": "phone",
+      "price": 100
     }
-  ]
+  ],
+  "options":
+    {
+      "computer": [
+        {
+          "id": 1,
+          "label": "Base Laptop (1 max per person)",
+          "name": "baseLaptop",
+          "price": 400,
+          "maxNumberOwned": 1
+        },
+        {
+          "id": 2,
+          "label": "Add Screen with fixation",
+          "name": "addScreen",
+          "price": 250,
+          "maxNumberOwned": 3
+        }
+      ],
+      "telephony": [
+        {
+          "id": 1,
+          "label": "Headphone",
+          "name": "headphone",
+          "price": 350,
+          "maxNumberOwned": 1
+        }
+      ]
+    }
 }
