@@ -72,7 +72,7 @@ const TablePerson: FC<TablePersonProps> = ({data}: TablePersonProps) => {
 
 			<Modal show={modal} size="lg" onHide={() => toggleModal()}>
 				<Modal.Header closeButton>
-					Create an new arrival
+					<h1>Create an new arrival</h1>
 				</Modal.Header>
 				<Modal.Body>
 					<PersonModal />

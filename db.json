@@ -78,14 +78,14 @@
           "label": "Base Laptop (1 max per person)",
           "name": "baseLaptop",
           "price": 400,
-          "maxNumberOwned": 1
+          "maxNumberLimit": 1
         },
         {
           "id": 2,
           "label": "Add Screen with fixation",
           "name": "addScreen",
           "price": 250,
-          "maxNumberOwned": 3
+          "maxNumberLimit": 3
         }
       ],
       "telephony": [
@@ -94,7 +94,7 @@
           "label": "Headphone",
           "name": "headphone",
           "price": 350,
-          "maxNumberOwned": 1
+          "maxNumberLimit": 1
         }
       ]
     }

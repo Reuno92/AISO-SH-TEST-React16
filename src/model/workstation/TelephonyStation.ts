@@ -1,17 +1,17 @@
-import {OptionMaterial} from '../Abstract/OptionMaterial';
+import Options from './Options';
 
 export class TelephonyStation {
 
 	constructor(
 		id: number,
 		telephony: Telephony,
-		optionsTelephony: Array<OptionsTelephony>,
+		optionsTelephony: Array<Options>,
 		total: number
 	) {
 	}
 }
 
-class Telephony {
+export class Telephony {
 
 	constructor(
 		public id: number,
@@ -19,17 +19,4 @@ class Telephony {
 		public name: string,
 		public price: string,
 	) {}
-}
-
-class OptionsTelephony extends OptionMaterial {
-
-	constructor(
-		public id: number,
-		public label: string,
-		public name: string,
-		public numberOwned?: number,
-		public total?: number
-	) {
-		super(id, label, name)
-	}
 }
