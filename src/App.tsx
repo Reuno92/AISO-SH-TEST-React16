@@ -1,6 +1,6 @@
 import React, {FC, useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Table} from 'react-bootstrap';
+import TablePerson from './components/TablePerson'
 
 const App: FC = () => {
 
@@ -18,22 +18,7 @@ const App: FC = () => {
       <header className="App-header">
       </header>
       <main className="container">
-        <Table striped bordered hover responsive>
-          <thead>
-          <tr>
-            <th>
-              test
-            </th>
-          </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                test
-              </td>
-            </tr>
-          </tbody>
-        </Table>
+        <TablePerson />
       </main>
       <footer>
 
