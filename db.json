@@ -6,7 +6,7 @@
       "lastName": "Doe",
       "job": "Commercial",
       "budget": 3000,
-      "arrivalDate": "October 22, 1983 09:00:00"
+      "arrivalDate": 435625200000
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "lastName": "Wozniak",
       "job": "Developer",
       "budget": 3000,
-      "arrivalDate": "October 22, 1983 09:00:00"
+      "arrivalDate": 435625200000
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "lastName": "Belfort",
       "job": "Trader",
       "budget": 6000,
-      "arrivalDate": "October 22, 1983 09:00:00"
+      "arrivalDate": 435625200000
     }
   ],
   "job": [
