@@ -1,4 +1,4 @@
-#Subject
+# Subject
 
 BananesExport est une entreprise d'exportation de bananes qui est en pleine croissance et recrute fortement dans le monde entier.
 Malheureusement les employés se plaignent de plus en plus de la lourdeur du processus d’accueil et de fourniture de poste de travail.
@@ -41,7 +41,7 @@ BananesExport souhaiterait une expérience utilisateur fluide et responsive qui 
 incohérente tout en permettant aux utilisateurs de visualiser au maximum leur futur environnement de travail. 
 
 
-### Contraintes techniques 
+## Contraintes techniques 
 - Le front sera développé en REACT 
 - Pour la partie stockage des données, le choix est laissé libre (pas besoin de persistance, un stockage en mémoire est suffisant) 
 - La production d’un backend n’est pas nécessaire
