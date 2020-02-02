@@ -2,24 +2,27 @@
   "persons": [
     {
       "id": 1,
-      "fistName": "John",
+      "firstName": "John",
       "lastName": "Doe",
       "job": "Commercial",
-      "budget": 3000
+      "budget": 3000,
+      "arrivalDate": "October 22, 1983 09:00:00"
     },
     {
       "id": 2,
-      "fistName": "Steve",
+      "firstName": "Steve",
       "lastName": "Wozniak",
       "job": "Developer",
-      "budget": 3000
+      "budget": 3000,
+      "arrivalDate": "October 22, 1983 09:00:00"
     },
     {
       "id": 3,
-      "fistName": "Jordan",
+      "firstName": "Jordan",
       "lastName": "Belfort",
       "job": "Trader",
-      "budget": 6000
+      "budget": 6000,
+      "arrivalDate": "October 22, 1983 09:00:00"
     }
   ],
   "job": [

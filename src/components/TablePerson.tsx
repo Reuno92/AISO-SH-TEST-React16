@@ -8,7 +8,7 @@ type TablePersonProps = {
 
 const TablePerson: FC<TablePersonProps> = ({data}: TablePersonProps) => {
 
-	console.log('data received', data);
+	console.log(data);
 
 	return(
 		<React.Fragment>
@@ -26,6 +26,19 @@ const TablePerson: FC<TablePersonProps> = ({data}: TablePersonProps) => {
 			</tr>
 			</thead>
 			<tbody>
+			{
+				data !== [] && data.map( person => (
+					<tr key={person.id}>
+						<td>{person.id}</td>
+						<td>{person.firstName}</td>
+						<td>{person.lastName}</td>
+						<td>{person.job}</td>
+						<td>{person.arrivalDate}</td>
+						<td>{person.budget}</td>
+						<td><Button variant="primary">See</Button></td>
+					</tr>
+				))
+			}
 			</tbody>
 		</Table>
 		</React.Fragment>

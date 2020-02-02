@@ -9,5 +9,6 @@ export class Person {
 		public budget: number,
 		public job: Job,
 		public arrivalDate?: Date,
-	) {}
+	) {
+	}
 }
