@@ -28,12 +28,12 @@ const TablePerson: FC<TablePersonProps> = ({data}: TablePersonProps) => {
 				{
 					data !== [] && data.map(person => (
 						<tr key={person.id}>
-							<td>{person.id}</td>
-							<td>{person.firstName}</td>
-							<td>{person.lastName}</td>
-							<td>{person.job}</td>
-							<td>{moment(person.arrivalDate).format('LL')}</td>
-							<td>{person.budget}</td>
+							<td>{ person.id }</td>
+							<td>{ person.firstName }</td>
+							<td>{ person.lastName }</td>
+							<td>{ person.job }</td>
+							<td>{ moment(person.arrivalDate).format('LL') }</td>
+							<td>{ person.budget }</td>
 							<td><Button variant="primary">See</Button></td>
 						</tr>
 					))
