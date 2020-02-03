@@ -52,14 +52,11 @@ const TablePerson: FC<TablePersonProps> = ({data}: TablePersonProps) => {
 	const toggleModal = () => setModal(!modal);
 
 	const submitPerson = (event: React.FormEvent) => {
-		const form = event.currentTarget;
 		event.preventDefault();
 		event.stopPropagation();
-		console.log(form);
 
-		/*dispatch({ type: '[PERSON_MODAL] CREATE', payload: new Person(
-			state.persons.length - 1, form[0].value, form[1].value, budget: 3000, job: form[2].value
-		)})*/
+		dispatch({type: '[PERSON_MODAL] CREATE', payload: state.person });
+		toggleModal();
 	};
 
 	return (
@@ -94,7 +91,7 @@ const TablePerson: FC<TablePersonProps> = ({data}: TablePersonProps) => {
 				</Modal.Header>
 				<Form onSubmit={(e: React.FormEvent) => submitPerson(e)}>
 				<Modal.Body>
-					<PersonModal form={state.person}/>
+					<PersonModal form={state.person} />
 				</Modal.Body>
 				<Modal.Footer>
 					<Button variant="secondary" onClick={ () => toggleModal()}>
