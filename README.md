@@ -52,7 +52,14 @@ run on terminal or your command invite:
 yarn install
 ```
 
-if you don't install `Yarn package manager`, you can install `yarn`with this URL: `https://legacy.yarnpkg.com/fr/`.
+if you don't install `Yarn package manager`, you can install `yarn` with this URL: `https://legacy.yarnpkg.com/fr/`.
+
+You will need to install `json-server` with command: 
+```
+npm i -g json-server
+```
+
+`json-server` allow you for launch the faker api.
 
 # Starting
 1 - Open your terminal or command invite for launch json-server with command:
